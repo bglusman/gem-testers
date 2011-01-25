@@ -10,6 +10,7 @@ class RubygemsController < ApplicationController
       respond_to do |format|
         format.html { @latest_results = TestResult.order('created_at DESC').limit(10) }
       end
+      render :layout => "index"
     end
   end
 

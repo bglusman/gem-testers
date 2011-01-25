@@ -16,13 +16,6 @@
   %body
     #topnav
       %a{:href => root_path} Gem Testers
-      #gem-search
-        %form{:onsubmit => "window.location = '/gems/' + $('#rubygems', this).val(); return false"}
-          %input#rubygems
-          %br
-          %label
-            search for a gem!
-
     #wrapper
       .info
         .flash=flash[:notice]
