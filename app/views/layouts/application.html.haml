@@ -1,29 +1,12 @@
-!!! XML
-!!! Strict
-%html
-  %head
-    %title
-      Gem Testers
-    = stylesheet_link_tag 'jquery-ui-1.8.6.custom'
-    = yield :stylesheets
-    = stylesheet_link_tag 'screen'
-    = javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js'
-    = javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js'
-    = javascript_include_tag :defaults
-    = yield :javascripts
-    = yield :feeds
-    = csrf_meta_tag
-  %body
-    #topnav
-      %a{:href => root_path} Gem Testers
-      #gem-search
-        %form{:onsubmit => "window.location = '/gems/' + $('#rubygems', this).val(); return false"}
-          %input#rubygems
-          %br
-          %label
-            search for a gem!
+=render partial:'shared/header'
+#gem-search
+  %form{:onsubmit => "window.location = '/gems/' + $('#rubygems', this).val(); return false"}
+    %input#rubygems
+    %br
+    %label
+      search!
 
-    #wrapper
-      .info
-        .flash=flash[:notice]
-        = yield
+#wrapper
+  .info
+    .flash=flash[:notice]
+    = yield

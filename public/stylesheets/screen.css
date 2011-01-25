@@ -219,6 +219,17 @@ td.grade, td.result-cell {
     color: #340505;
     font-size: 1.5em;
 }
+
+#gem-search-header {
+	width: 20%;
+    text-align: right;
+}
+
+#gem-search-header label{
+    color: #FF0505;
+    font-size: 1.0em;
+}
+
 input#rubygems {
     border-radius: 10px;
     -moz-border-radius: 10px;
